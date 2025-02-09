@@ -3,7 +3,7 @@ import {Synchronize} from '../lib/synchronize';
 
 describe('Synchronize', () => {
     it('should be added to classes', async () => {
-        const positions = [];
+        const positions: number[] = [];
 
         class Test {
             @Synchronize()

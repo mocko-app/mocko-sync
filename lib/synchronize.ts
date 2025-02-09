@@ -18,7 +18,11 @@ const getLockQueue = (token: string | symbol = STANDARD_TOKEN): LockQueue => {
     if (!queueMap.has(token)) {
         queueMap.set(token, new LockQueue());
     }
-    return queueMap.get(token);
+    const value = queueMap.get(token);
+    if (!value) {
+        throw new Error('Internal @mocko/sync error.');
+    }
+    return value;
 };
 
 /**

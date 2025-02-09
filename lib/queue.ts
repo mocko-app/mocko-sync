@@ -37,7 +37,7 @@ export class LockQueue {
         if (this.queue.length > 0) {
             const resolver = this.queue.shift();
             this.lock = true;
-            resolver();
+            resolver?.();
         }
     }
 

@@ -23,9 +23,9 @@ describe('LockQueue', () => {
         //
         // set up promises
         //
-        const isCalled = [];
-        const resolver = [];
-        const inOrder = [];
+        const isCalled: boolean[] = [];
+        const resolver: Function[] = [];
+        const inOrder: number[] = [];
         const queue = new LockQueue();
         //
         // create an async method and add them to the list.
